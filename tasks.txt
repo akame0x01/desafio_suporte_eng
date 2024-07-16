@@ -1,0 +1,23 @@
+[ ] Understand how to write simple programs in elixir.
+  [x] Hello world
+  [ ] Receive a input and return something
+  [ ] Try using lists
+  [ ] thats all, you probably wont need to use more than this.
+[ ] Start the challenge 
+ [ ] Understand what they are asking for.
+
+
+i think that is a good way to do this.
+#defmodule Tool do 
+#  bunch of functions here
+#  
+#  defp start
+#  def get input
+#  def value 
+#end 
+
+#Tool.start()
+
+
+
+
