@@ -21,23 +21,37 @@ defmodule KingdomTool do
 
   """
   def start do
-    how_to_use()
-    get_input_from_user()
+    KingdomTool.how_to_use()
+    names_list = []
+    names_list = KingdomTool.get_inputs(names_list)
+    IO.inspect(names_list, label: "Names_list", charlists: :as_lists)
+    names_list = KingdomTool.check_for_same_name(names_list)
+    IO.inspect(names_list, label: "Names_list", charlists: :as_lists)
   end
 
   def how_to_use do
-    IO.puts("explaining...")
+    IO.puts("explaining...\n")
   end
 
-  def get_input_from_user do
-    # Get User inputs until blank line and check for error.
-    #
-    check_for_same_name()
+  def get_inputs(list) do
+    # Get User inputs, remove any blank characters and if it's not empty save it to a list.
+    input = IO.gets("> ") |> String.trim()
+    
+    # Names does have numbers, remove any numbers in the input and if there are only numbers the result will be an empty string.
+    input = String.replace(input, ~r/\d/,"")
+
+    if input == "" do
+      list = Enum.reverse(list)
+    else
+      list = [input | list]
+      KingdomTool.get_inputs(list)
+    end
   end
 
-  def check_for_same_name do
+  def check_for_same_name(names_list) do
     # If we have the same name in the list provided by the user, put an romane number in the final. 
-    print_list_to_user()
+    #String.downcase(string) |> String.normalize(:nfkd)
+    KingdomTool.print_list_to_user()
   end
 
   def print_list_to_user do
