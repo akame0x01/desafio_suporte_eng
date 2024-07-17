@@ -1,11 +1,10 @@
-[ ] Understand how to write simple programs in elixir.
+[x] Understand how to write simple programs in elixir.
   [x] Hello world
-  [ ] Receive a input and return something
-  [ ] Try using lists
-  [ ] thats all, you probably wont need to use more than this.
-[ ] Start the challenge 
- [ ] Understand what they are asking for.
-
+  [x] Receive a input and return something
+  [x] Try using lists
+  [x] thats all, you probably wont need to use more than this.
+[x] Start the challenge 
+ [x] Understand what they are asking for.
 
 i think that is a good way to do this.
 #defmodule Tool do 
